@@ -16,7 +16,7 @@
 
 - 💻 &nbsp; Python | C          | C++       | Bash | Little of C#
 - 🌐 &nbsp; HTML   | JavaScript | Bootstrap |
-- 🛢 &nbsp; MySQL  | Firebase   | Xampp     |     
+- 🛢 &nbsp; MySQL  | MongoDB    | InfluxDB  |     
 - 🔧 &nbsp; VSCode | Docker     | Kubernetes| Git  | GitFlow
 <!-- - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | OpenShot -->
 
