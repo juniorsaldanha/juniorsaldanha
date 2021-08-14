@@ -261,6 +261,7 @@ alias dpush='docker push'
 alias drmi='docker rmi $(docker images --filter dangling=true -q)'
 alias drmiall='docker rmi $(docker images -q)'
 
+alias c='docker-compose'
 alias cbuild='docker-compose build'
 alias cup='docker-compose up -d'
 alias cbup='docker-comspose up -d --build'
