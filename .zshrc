@@ -141,8 +141,23 @@ function install {
   fi
 }
 
+
+
 function remotedocker_active()
 {
+# The following line and options.conf is to setup access in Docker Host Daemon, dont forget to open port 2375 tcp on firewall
+# sudo mkdir -p /etc/systemd/system/docker.service.d
+# sudo nano /etc/systemd/system/docker.service.d/options.conf
+            # [Service]
+            # ExecStart=
+            # ExecStart=/usr/bin/dockerd -H unix:// -H tcp://0.0.0.0:2375
+
+# # Reload the systemd daemon.
+# sudo systemctl daemon-reload
+
+# # Restart Docker.
+# sudo systemctl restart docker
+
     if [ "$1" ];then
         export DOCKER_HOST=tcp://$1:2375
         echo "Connected to Docker Daemon on $1:2375"
