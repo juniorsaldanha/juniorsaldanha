@@ -263,6 +263,7 @@ alias drmiall='docker rmi $(docker images -q)'
 
 alias c='docker-compose'
 alias cbuild='docker-compose build'
+alias clogs='docker-compose logs --tail 50'
 alias cup='docker-compose up -d'
 alias cbup='docker-comspose up -d --build'
 alias cps='docker-compose ps'
