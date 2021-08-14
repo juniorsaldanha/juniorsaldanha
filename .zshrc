@@ -218,7 +218,13 @@ function ..()
     for i in `seq 1 $1`;
     do
         cd ../
+        ls
     done;
+}
+
+function mkcd()
+{
+	mkdir $1 && cd $1
 }
 
 function dbuild() {
@@ -273,6 +279,7 @@ alias follow="tail -f -n +1"
 alias biggest="du -h --max-depth=1 | sort -h"
 alias pyvenv="virtualenv -p python3 venv && source venv/bin/activate"
 alias pysource="source venv/bin/activate"
+alias o="open ." # Open the current directory in Finder
 
 
 export GREP_OPTIONS='--color=auto'
@@ -280,5 +287,16 @@ export GREP_COLOR='5;35;5'
 
 
 export NICKNAME="UmSaldanha"
+
+
+print_before_the_prompt () {
+    dir=$PWD
+    home=$HOME
+    dir=${dir/"$HOME"/"~"}
+    printf "\n $txtred%s: $bldpur%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt)"
+}
+
+echo 
 echo -ne "Good Morning, $NICKNAME! It's "; date '+%A, %B %-d %Y'
-echo -e "And now your moment of Zen:"; fortune
+echo
+fortune | cowsay -f tux
