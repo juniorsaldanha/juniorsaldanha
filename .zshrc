@@ -141,6 +141,21 @@ function install {
   fi
 }
 
+function remotedocker_active()
+{
+    if [ "$1" ];then
+        export DOCKER_HOST=tcp://$1:2375
+        echo "Connected to Docker Daemon on $1:2375"
+    else
+        echo "Example of usage; rdocker ipOfDockerHost"
+    fi
+}
+function remotedocker_deactive()
+{
+    echo "Deactivated Docker Daemon Remote from $DOCKER_HOST"
+    unset DOCKER_HOST
+}
+
 function ness() {
     if [ "$1" ];then
 	ping=`ping -c 1 $1 | grep bytes | wc -l`
@@ -190,7 +205,6 @@ transfer(){
         fi
     fi
 }
-
 
 function extract () {
   if [ -f $1 ] ; then
