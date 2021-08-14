@@ -259,7 +259,7 @@ alias dtag='docker tag'
 alias dips='docker images -a'
 alias dpush='docker push'
 alias drmi='docker rmi $(docker images --filter dangling=true -q)'
-alias drmiall='docker rmi $(docker images -q)'
+alias drmiall='docker rmi -f $(docker images -q)'
 
 alias c='docker-compose'
 alias cbuild='docker-compose build'
