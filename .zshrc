@@ -141,7 +141,16 @@ function install {
   fi
 }
 
-
+function disabledevverification()
+{
+    sudo spctl --master-disable
+    echo "Developer verification Disabled"
+}
+function enabledevverification()
+{
+    sudo spctl --master-enable
+    echo "Developer verification Enabled"
+}
 
 function remotedocker_active()
 {
