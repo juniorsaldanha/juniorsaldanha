@@ -339,4 +339,6 @@ print_before_the_prompt () {
 echo 
 echo -ne "Good Morning, $NICKNAME! It's "; date '+%A, %B %-d %Y'
 echo
-fortune | cowsay -f tux
+_cows=("head-in" "daemon" "meow" "moofasa" "moose" "turtle" "udder" "vader" "www" "satanic" "Stegosaurus" "beavis.zen" "blowfish" "sodomized" "telebears")
+_cow=${_cows[$RANDOM % ${#_cows[@]} ]}
+fortune | cowsay -f $_cow
