@@ -190,7 +190,7 @@ function ness() {
         fi
     else
         echo "Example of usage; ness ipOfHost"
-    fi # closing statement of if-else block
+    fi
 }
 
 function winbox() {
@@ -198,7 +198,6 @@ function winbox() {
     export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
     export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"
     wine64 ~/Documents/winbox64.exe > /dev/null 2>&1 &
-
 }
 
 transfer(){
@@ -262,7 +261,9 @@ function ..()
 
 function mkcd()
 {
-	mkdir $1 && cd $1
+    if [ "$1" ];then
+        mkdir $1 && cd $1
+    fi
 }
 
 function dbuild() {
@@ -285,8 +286,13 @@ function cbuildf() {
         docker-compose -f "$1" build
     fi
 }
-
-
+function biggest()
+{
+    if [ "$1" ];then
+        du -h -d 1 "$1" | sort -h
+    fi
+    
+}
 
 alias d="docker"
 alias dps='docker ps -a'
@@ -309,25 +315,18 @@ alias cdown='docker-compose down'
 alias cdownv='docker-compose down -v'
 alias cexec='docker-compose exec -it'
 
-
 alias vs='code'
-alias ls='ls -ahG'
 alias ll='ls -lahG'
 alias nn='nano'
 alias rmf='rm -rf'
 alias follow="tail -f -n +1"
-alias biggest="du -h --max-depth=1 | sort -h"
 alias pyvenv="virtualenv -p python3 venv && source venv/bin/activate"
 alias pysource="source venv/bin/activate"
 alias o="open ." # Open the current directory in Finder
 
-
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='5;35;5'
-
-
 export NICKNAME="UmSaldanha"
-
 
 print_before_the_prompt () {
     dir=$PWD
