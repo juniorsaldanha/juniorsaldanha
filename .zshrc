@@ -133,6 +133,13 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 source ~/.env
 
+echo 
+echo -ne "Good Morning, $NICKNAME! It's "; date '+%A, %B %-d %Y'
+echo
+_cows=("head-in" "daemon" "meow" "moofasa" "moose" "turtle" "udder" "vader" "www" "satanic" "Stegosaurus" "beavis.zen" "blowfish" "sodomized" "telebears")
+_cow=${_cows[$RANDOM % ${#_cows[@]} ]}
+fortune | cowsay -f $_cow
+
 function install {
   which $1 &> /dev/null
   if [ $? -ne 0 ]; then
@@ -327,17 +334,3 @@ alias o="open ." # Open the current directory in Finder
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='5;35;5'
 export NICKNAME="UmSaldanha"
-
-print_before_the_prompt () {
-    dir=$PWD
-    home=$HOME
-    dir=${dir/"$HOME"/"~"}
-    printf "\n $txtred%s: $bldpur%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt)"
-}
-
-echo 
-echo -ne "Good Morning, $NICKNAME! It's "; date '+%A, %B %-d %Y'
-echo
-_cows=("head-in" "daemon" "meow" "moofasa" "moose" "turtle" "udder" "vader" "www" "satanic" "Stegosaurus" "beavis.zen" "blowfish" "sodomized" "telebears")
-_cow=${_cows[$RANDOM % ${#_cows[@]} ]}
-fortune | cowsay -f $_cow
