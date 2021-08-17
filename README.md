@@ -1,10 +1,10 @@
-<h2> Hey there! I'm Junior Saldanha. <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
+<h2> Hey there! I'm Junior Saldanha. <img src="https://github.com/devSouvik/devSouvik/raw/master/Hi.gif" width="25"></h2>
 <!---<img align="right" alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="500"/>--->
 <img align="right" alt="GIF" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/source.gif" width="480" height="480" frameBorder="0" class="giphy-embed"></img>
 
 <h3> 👨🏻‍💻 About Me </h3>
 
-- 🔭 &nbsp; I’m currently learning Terraform
+- 🔭 &nbsp; I’m currently learning Terraform, and Jenkins to have a better asset of skills with one more tool of CI/CD
 - 🤔 &nbsp; Exploring new technologies and developing software solutions and quick hacks.
 <!-- - 🎓 &nbsp; Studying Computer Science, computer programming and Mathematics. -->
 - 💼 &nbsp; Developer, DEVOPS, Network Analyst, Solutions Architect.
@@ -14,10 +14,10 @@
 
 <h3>🛠 Tech Stack</h3>
 
-- 💻 &nbsp; Python | C          | C++       | Bash | Little of C#
-- 🌐 &nbsp; HTML   | JavaScript | Bootstrap |
-- 🛢 &nbsp; MySQL  | MongoDB    | InfluxDB  |     
-- 🔧 &nbsp; VSCode | Docker     | Kubernetes| Git  | GitFlow
+- 💻 &nbsp; Python | C | C++ | Bash | Little of C#
+- 🌐 &nbsp; HTML | JavaScript | Bootstrap |
+- 🛢 &nbsp; MySQL | MongoDB | InfluxDB |     
+- 🔧 &nbsp; VSCode | Docker | Kubernetes | Git | GitFlow | CI/CD | GCP | AWS | DigitalOcean
 <!-- - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | OpenShot -->
 
 <br>
