@@ -15,8 +15,8 @@
 <h3>🛠 Tech Stack</h3>
 
 - 💻 &nbsp; Python | C | C++ | Bash | Little of C#
-- 🌐 &nbsp; HTML | JavaScript | Bootstrap |
-- 🛢 &nbsp; MySQL | MongoDB | InfluxDB |     
+- 🌐 &nbsp; HTML | JavaScript | Bootstrap | ReactJS (Basic)
+- 🛢 &nbsp; MySQL | MongoDB | InfluxDB | BigQuert    
 - 🔧 &nbsp; VSCode | Docker | Kubernetes | Git | GitFlow | CI/CD | GCP | AWS | DigitalOcean
 <!-- - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | OpenShot -->
 
