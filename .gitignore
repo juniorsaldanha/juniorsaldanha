@@ -9,3 +9,7 @@
 !.zshrc
 !.p10k.zsh
 !install-terminal.sh
+**/*.localz
+**/*.local
+**/*.git
+**/*.DS_Store
