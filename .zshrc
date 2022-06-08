@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -79,18 +81,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
-    python
+    # git
+    # python
     virtualenv
-    docker
-    docker-compose
-    vscode
-    brew
-    gcloud
+    # docker
+    # docker-compose
+    # vscode
+    # brew
+    # gcloud
     zsh-syntax-highlighting
     zsh-autosuggestions
-    git-flow
-    git-flow-completion
+    # git-flow
+    # git-flow-completion
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -133,12 +135,13 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 source ~/.env
 
-echo 
-echo -ne "Good Morning, $NICKNAME! It's "; date '+%A, %B %-d %Y'
-echo
-_cows=("head-in" "daemon" "meow" "moofasa" "moose" "turtle" "udder" "vader" "www" "satanic" "Stegosaurus" "beavis.zen" "blowfish" "sodomized" "telebears")
-_cow=${_cows[$RANDOM % ${#_cows[@]} ]}
-fortune | cowsay -f $_cow
+#echo 
+echo -ne "Good Morning, Junior Saldanha!"; date '+%A, %B %-d %Y'
+#echo
+
+#_cows=("head-in" "daemon" "meow" "moofasa" "moose" "turtle" "udder" "vader" "www" "satanic" "Stegosaurus" "beavis.zen" "blowfish" "sodomized" "telebears")
+#_cow=${_cows[$RANDOM % ${#_cows[@]} ]}
+#fortune | cowsay -f $_cow
 
 function install {
   which $1 &> /dev/null
@@ -146,6 +149,11 @@ function install {
     echo "Installing: ${1}..."
     brew install $1
   fi
+}
+
+function sourcevenv()
+{
+    source venv/bin/activate
 }
 
 function disabledevverification()
@@ -207,7 +215,7 @@ function winbox() {
     wine64 ~/Documents/winbox64.exe > /dev/null 2>&1 &
 }
 
-transfer(){
+function transfer(){
     if [ $# -eq 0 ]
     then
         echo "No arguments specified.\nUsage:\n transfer <file|directory>\n ... | transfer <file_name>">&2
@@ -300,6 +308,17 @@ function biggest()
     fi
     
 }
+function __openvscode(){
+    if [ "$1" ];then
+        if [ "$2" ];then
+            echo "Opening vscode for $1: file/folder $2"
+            code  --user-data-dir ~/.vscode_profiles/$1/data/ --extensions-dir ~/.vscode_profiles/$1/extensions $2
+        else
+            echo "Opening vscode for $1"
+            code  --user-data-dir ~/.vscode_profiles/$1/data/ --extensions-dir ~/.vscode_profiles/$1/extensions
+        fi
+    fi
+}
 
 alias d="docker"
 alias dps='docker ps -a'
@@ -330,7 +349,29 @@ alias follow="tail -f -n +1"
 alias pyvenv="virtualenv -p python3 venv && source venv/bin/activate"
 alias pysource="source venv/bin/activate"
 alias o="open ." # Open the current directory in Finder
-
+alias vspython="__openvscode python"
+alias vsplatformio="__openvscode platformio"
+alias vsbash="__openvscode bash"
+alias vsnode="__openvscode node"
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='5;35;5'
 export NICKNAME="UmSaldanha"
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+
+#Pyenv - install and setup python version with pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/umsaldanha/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/umsaldanha/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/umsaldanha/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/umsaldanha/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
