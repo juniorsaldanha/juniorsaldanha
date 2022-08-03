@@ -319,6 +319,13 @@ function __openvscode(){
         fi
     fi
 }
+function __checkcpplint(){
+	if [ "$1" ];then
+		cpplint --filter=-runtime/int --exclude=$1/.pio/ --quiet --output=vs7 --recursive $1
+	else
+		cpplint --filter=-runtime/int --exclude=.pio/ --quiet --output=vs7 --recursive .
+	fi
+}
 
 alias d="docker"
 alias dps='docker ps -a'
@@ -353,6 +360,8 @@ alias vspython="__openvscode python"
 alias vsplatformio="__openvscode platformio"
 alias vsbash="__openvscode bash"
 alias vsnode="__openvscode node"
+alias vsdotnet="__openvscode dotnet"
+alias checkcpp="__checkcpplint"
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='5;35;5'
 export NICKNAME="UmSaldanha"
@@ -372,6 +381,13 @@ if [ -f '/Users/umsaldanha/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/umsaldanha/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/umsaldanha/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/umsaldanha/.bun/_bun" ] && source "/Users/umsaldanha/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/umsaldanha/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
