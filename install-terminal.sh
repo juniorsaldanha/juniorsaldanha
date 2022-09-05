@@ -28,21 +28,25 @@ echo "Starting the installation of packages with brew."
 
 brew_pack1=(
     git
+    htop
     vcprompt
-    google-cloud-sdk
+    pyenv
+    sshpass
     rar
-    rectangle
     xquartz
     wine-stable
     wget
-)
-for el in ${brew_pack1[*]}; do
-    echo "  Installing $el with brew."
-    brew install -q $el
-done
-
-brew_pack2=(
+    curl
+    nano
+    tree
+    tmate
+    google-cloud-sdk
+    websocat
+    unzip
+    telnet
     alfred
+    visual-studio-code
+    rectangle
     google-chrome
     firefox
     alt-tab
@@ -50,10 +54,20 @@ brew_pack2=(
     fig
     setapp
     nrlquaker-winbox
+    cakebrew
+    classicftp
+    openvpn-connect
+    forticlient
+    openfortivpn
+    node
+    cmake
+    rsync
+    wireshark
+    platformio
 )
-for el in ${brew_pack2[*]}; do
+for el in ${brew_pack1[*]}; do
     echo "  Installing $el with brew."
-    brew install -q $el
+    brew install -q -f $el
 done
 
 echo "Finished the installation with brew."
