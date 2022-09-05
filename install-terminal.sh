@@ -80,5 +80,10 @@ Configure
     - Bartender (license on email and with setapp)
     - Alt-Tab
         - Shortcut (cmd+tab)
+    - Fig (best everything)
+        - zsh-syntax-highlighting
+        - zsh-you-should-use
+        - zsh-autosuggestions
+        - powerlevel10k (it will read the .p10k.zsh from home folder)
 EOF
 
