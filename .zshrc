@@ -83,6 +83,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   git
   virtualenv
+  gcloud
   )
 
 source $ZSH/oh-my-zsh.sh

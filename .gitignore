@@ -3,13 +3,15 @@
 /*
 **/.DS_Store
 **/.env
+**/*.localz
+**/*.local
+**/*.git
+**/*.DS_Store
 
 # But not these files...
 !.gitignore
 !.zshrc
 !.p10k.zsh
+!.juniorsaldanha.zsh
 !install-terminal.sh
-**/*.localz
-**/*.local
-**/*.git
-**/*.DS_Store
+!alfred_theme.alfredappearance
