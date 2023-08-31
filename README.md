@@ -4,20 +4,17 @@
 
 <h3> 👨🏻‍💻 About Me </h3>
 
-- 🔭 &nbsp; I’m currently learning Terraform, and Jenkins to have a better asset of skills with one more tool of CI/CD
+- 🔭 &nbsp; I’m currently focusing on improving my Go knowledge.
 - 🤔 &nbsp; Exploring new technologies and developing software solutions and quick hacks.
 <!-- - 🎓 &nbsp; Studying Computer Science, computer programming and Mathematics. -->
-- 💼 &nbsp; Developer, DEVOPS, Network Analyst, Solutions Architect.
-- 🌱 &nbsp; Enthusiast of OpenSource, Docker, Kubernetes, Ansible, Terraform, IoT and much more .
-- ✍️ &nbsp; Watching some TVShows and trying out latest design trends as hobbies/side hustles.
-- ☕ &nbsp; I belive, a perfect cup of coca-cola can be the ultimate solution for any stress. 
-
+- 💼 &nbsp; Software Engineer, Network Engineer (past thing, not anymore).
+- 🌱 &nbsp; Enthusiast of OpenSource, Docker, Kubernetes, C/C++, Go Lang, Python.
 <h3>🛠 Tech Stack</h3>
 
-- 💻 &nbsp; Python | C | C++ | Bash | bit of C#
-- 🌐 &nbsp; HTML | JavaScript | Bootstrap | ReactJS (Basic)
-- 🛢 &nbsp; MySQL | MongoDB | InfluxDB | BigQuert    
-- 🔧 &nbsp; VSCode | Docker | Kubernetes | Git | GitFlow | CI/CD | GCP | AWS | DigitalOcean
+- 💻 &nbsp; Python | C | C++ | Go | Bash |
+- 🌐 &nbsp; HTML | JavaScript | Bootstrap | ReactJS (Basics)
+- 🛢 &nbsp; SQL (SQL Server, MySQL) | NoSQL (MongoDB, InfluxDb)
+- 🔧 &nbsp; VSCode (with VIM S2) | Docker | Kubernetes | Git
 <!-- - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | OpenShot -->
 
 <br>
@@ -33,7 +30,7 @@
 <h3> 🤝🏻 Connect with Me </h3>
 
 <p align="center">
-&nbsp; <a href="https://twitter.com/umsaldanha" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/twitter.png" width="50" /></a>  
+&nbsp; <a href="https://x/umsaldanha" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/twitter.png" width="50" /></a>  
 &nbsp; <a href="https://www.instagram.com/umsaldanha/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" width="50" /></a>  
 &nbsp; <a href="https://www.linkedin.com/in/umsaldanha/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/linkedin.png" width="50" /></a>
 &nbsp; <a href="mailto:umsaldanha@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png"  width="50" /></a>
