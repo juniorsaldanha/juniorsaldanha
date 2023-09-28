@@ -1,103 +1,26 @@
-#!/bin/sh
+#!/bin/zsh
 
+# Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Install p10k (https://github.com/romkatv/powerlevel10k)
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/plugins/powerlevel10k
+echo 'source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+# Download p10k configuration from github
+curl -o ~/.zsh/plugins/powerlevel10k/p10k_conf.zsh https://raw.githubusercontent.com/juniorsaldanha/juniorsaldanha/main/p10k.zsh
+echo 'source ~/.zsh/plugins/powerlevel10k/p10k_conf.zsh' >>~/.zshrc
 
-# https://raw.githubusercontent.com/juniorsaldanha/juniorsaldanha/main/.p10k.zsh
-# https://raw.githubusercontent.com/juniorsaldanha/juniorsaldanha/main/.juniorsaldanha.zsh
-# https://raw.githubusercontent.com/juniorsaldanha/juniorsaldanha/main/alfred_theme.alfredappearance
+# Install zsh-autosuggestions 
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
+echo 'source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >>~/.zshrc
 
-echo "Download some files."
-file_github_download=(
-    .p10k.zsh
-    .juniorsaldanha.zsh
-    alfred_theme.alfredappearance
-)
-for el in ${file_github_download[*]}; do
-    echo "  Downloading $el with brew."
-    curl "https://raw.githubusercontent.com/juniorsaldanha/juniorsaldanha/main/$el" -s -o ~/.teste.$el
-done
-echo "Download done."
+# Install zsh-syntax-highlight
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/plugins/zsh-syntax-highlighting
+echo 'source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>~/.zshrc
 
-echo "-----_____-----_____-----_____-----_____-----_____-----_____-----_____-----"
+# Download custom functions from github
+curl -o ~/.zsh/custom-functions.zsh https://raw.githubusercontent.com/juniorsaldanha/juniorsaldanha/main/custom-functions.zsh
+echo 'source ~/.zsh/custom-functions.zsh' >>~/.zshrc
 
-echo "Update brew list and others things."
-brew update -q
-
-echo "Starting the installation of packages with brew."
-
-brew_pack1=(
-    git
-    htop
-    vcprompt
-    pyenv
-    sshpass
-    rar
-    xquartz
-    wine-stable
-    wget
-    curl
-    nano
-    tree
-    tmate
-    google-cloud-sdk
-    websocat
-    unzip
-    telnet
-    alfred
-    visual-studio-code
-    rectangle
-    google-chrome
-    firefox
-    alt-tab
-    iterm2
-    fig
-    setapp
-    nrlquaker-winbox
-    cakebrew
-    classicftp
-    openvpn-connect
-    forticlient
-    openfortivpn
-    node
-    cmake
-    rsync
-    wireshark
-    platformio
-)
-for el in ${brew_pack1[*]}; do
-    echo "  Installing $el with brew."
-    brew install -q -f $el
-done
-
-echo "Finished the installation with brew."
-sleep 5
-clear
-
-cat << EOF
-Open Setapp and the apps below
-    - bartender4 
-    - batteries
-    - chatmate for whatsapp
-    - cleanmymac x
-    - cleanshow x
-    - meeter
-    - repeat
-    - mission control plus
-    - sidenotes
-
-Configure
-    - Alfred
-        - license on email
-        - Shortcut (cmd+space)
-        - Install Theme (alfred_theme.alfredappearance on repo)
-    - Bartender (license on email and with setapp)
-    - Alt-Tab
-        - Shortcut (cmd+tab)
-    - Fig (best everything)
-        - zsh-syntax-highlighting
-        - zsh-you-should-use
-        - zsh-autosuggestions
-        - powerlevel10k (it will read the .p10k.zsh from home folder)
-EOF
-
+# Finish the program
+echo 'Done! Everything installed! https://github.com/juniorsaldanha/juniorsaldanha'

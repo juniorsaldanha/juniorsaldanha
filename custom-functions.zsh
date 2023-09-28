@@ -59,12 +59,12 @@ function nsensorpc() {
     fi
 }
 
-function winbox() {
-    export PATH="/Applications/Wine Staging.app/Contents/Resources/wine/bin:$PATH"
-    export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
-    export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"
-    wine64 ~/Documents/winbox64.exe > /dev/null 2>&1 &
-}
+#function winbox() {
+    # export PATH="/Applications/Wine Staging.app/Contents/Resources/wine/bin:$PATH"
+    # export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
+    # export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+    # wine64 ~/Documents/winbox64.exe > /dev/null 2>&1 &
+# }
 
 function transfer(){
     if [ $# -eq 0 ]
@@ -133,25 +133,6 @@ function biggest()
     
 }
 
-function vscode(){
-    VSCODEPROFILES=~/.vscode_profiles/
-    if ([ "$1" ] && [ -d "$VSCODEPROFILES$1" ]);then
-        if [ "$2" ];then
-            echo "Opening vscode for $1 | file/folder $2"
-            code  --user-data-dir $VSCODEPROFILES$1/data/ --extensions-dir $VSCODEPROFILES$1/extensions $2
-        else
-            echo "Opening vscode for $1 | absolute path:`pwd`"
-            code  --user-data-dir $VSCODEPROFILES$1/data/ --extensions-dir $VSCODEPROFILES$1/extensions .
-        fi
-    else
-        echo "You have to type some of the profile names to open it.
-example: vscode `ls $VSCODEPROFILES | head -n 1` optional/path/or/file
-_________________________
-`ls $VSCODEPROFILES`
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾"
-    fi
-}
-
 function cppcheck(){
     if [ "$1" ];then
         cpplint --filter=-runtime/int --exclude=$1/.pio/ --quiet --output=vs7 --recursive $1
@@ -162,19 +143,15 @@ function cppcheck(){
 
 
 #Aliases
-alias vs='code'
 alias ll='ls -lahG'
-alias nn='nano'
 alias rmf='rm -rf'
 alias follow="tail -f -n +1"
 alias o="open ."
-alias pio="/Users/$USER/.platformio/penv/bin/pio"
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
-
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='5;35;5'
+alias lg="lazygit"
+# export GREP_OPTIONS='--color=auto'
+# export GREP_COLOR='5;35;5'
 
 # Setup pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"

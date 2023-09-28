@@ -1,6 +1,6 @@
 
 # Ignore everything
-/*
+*
 **/.DS_Store
 **/.env
 **/*.localz
@@ -10,8 +10,6 @@
 
 # But not these files...
 !.gitignore
-!.zshrc
-!.p10k.zsh
-!.juniorsaldanha.zsh
-!install-terminal.sh
-!alfred_theme.alfredappearance
+!*.zsh
+!*.sh
+!*.alfredappearance
