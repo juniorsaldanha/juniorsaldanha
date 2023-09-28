@@ -22,5 +22,12 @@ echo 'source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 curl -o ~/.zsh/custom-functions.zsh https://raw.githubusercontent.com/juniorsaldanha/juniorsaldanha/main/custom-functions.zsh
 echo 'source ~/.zsh/custom-functions.zsh' >>~/.zshrc
 
+brew install nvim
+rm -rf ~/.config/nvim && \
+rm -rf ~/.local/share/nvim && \
+git clone --depth=1 https://github.com/juniorsaldanha/nvim ~/.config/nvim 
+
 # Finish the program
-echo 'Done! Everything installed! https://github.com/juniorsaldanha/juniorsaldanha'
+echo '\n============================================================================'
+echo '\n    Done! Everything installed! https://github.com/juniorsaldanha/juniorsaldanha'
+echo '\n============================================================================'
