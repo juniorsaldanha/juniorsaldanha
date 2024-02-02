@@ -4,17 +4,17 @@
 
 <h3> 👨🏻‍💻 About Me </h3>
 
-- 🔭 &nbsp; I’m currently focusing on improving my Go knowledge.
+- 🔭 &nbsp; I’m currently working as tech lead.
 - 🤔 &nbsp; Exploring new technologies and developing software solutions and quick hacks.
 <!-- - 🎓 &nbsp; Studying Computer Science, computer programming and Mathematics. -->
 - 💼 &nbsp; Software Engineer, Network Engineer (past thing, not anymore).
-- 🌱 &nbsp; Enthusiast of OpenSource, Docker, Kubernetes, C/C++, Go Lang, Python.
+- 🌱 &nbsp; Enthusiast of OpenSource, Docker, Kubernetes, C/C++, Go, Python.
 <h3>🛠 Tech Stack</h3>
 
-- 💻 &nbsp; Python | C | C++ | Go | Bash |
+- 💻 &nbsp; C | C++ | Go | Bash | Python
 - 🌐 &nbsp; HTML | JavaScript | Bootstrap | ReactJS (Basics)
 - 🛢 &nbsp; SQL (SQL Server, MySQL) | NoSQL (MongoDB, InfluxDb)
-- 🔧 &nbsp; VSCode (with VIM S2) | Docker | Kubernetes | Git
+- 🔧 &nbsp; Neovim | Docker | Kubernetes | Git
 <!-- - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | OpenShot -->
 
 <br>
